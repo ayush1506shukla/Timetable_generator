@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff6f61, #d32f2f);
+            color: white;
+            text-align: center;
+            padding: 1em;
+            border-bottom: 4px solid #ff6f61;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 4px solid #d32f2f;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+            padding: 0.5em 1em;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-icons img {
+            height: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .nav-icons img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        main {
+            padding: 2em;
+            text-align: center;
+        }
+
+        #welimage {
+            border-radius: 15px;
+            width: 80%;
+            max-width: 500px;
+            margin: 2em auto;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .emoji {
+            font-size: 4em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 2em;
+            color: #d32f2f;
+            margin-bottom: 1em;
+        }
+
+        .clock {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Timetable Generator</h1>
+</header>
+
+<nav>
+    <div class="clock">Current time: <span id="time"></span></div>
+    <div class="nav-icons">
+        <a href="https://web.whatsapp.com/" target="_blank">
+            <img src="Image/whatsapp.webp" alt="WhatsApp">
+        </a>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox?compose=DmwnWrRnXvdVqbxrNDZkSnKQrBHGNhnwqmfPKWDqXHqgXMkhSbDTBCFTVZGtcBVxWZTrBTZwVVnq" target="_blank">
+            <img src="Image/gmail.png" alt="Gmail">
+        </a>
+    </div>
+    <div>
+        <a href="Principle/loginprinciple.html">Principal</a>
+        <a href="Student/loginStudent.html">Student</a>
+        <a href="Faculty/loginfaculty.html">Faculty</a>
+    </div>
+</nav>
+
+<main class="container">
+    <p class="emoji">👋</p>
+    <p>Welcome to the Timetable Generator</p>
+    <img src="Image/welcome.jpeg" id="welimage" alt="Welcome Image">
+</main>
+
+<script>
+    setInterval(() => {
+        let a = new Date();
+        let weekday = a.toLocaleDateString("default", { weekday: "long" });
+        let year = a.toLocaleDateString("default", { year: "numeric" });
+        let month = a.toLocaleDateString("default", { month: "long" });
+        let day = a.toLocaleDateString("default", { day: "numeric" });
+        let date = `${weekday}, ${day} ${month} ${year}`;
+        let time = a.toLocaleTimeString();
+        document.getElementById('time').innerHTML = `${time}<br>${date}`;
+    }, 1000);
+</script>
+
+</body>
+</html>

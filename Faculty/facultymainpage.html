@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url('../Image/faculty.webp');
+            background-position:bottom;
+            background-size:22%;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #666;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #888;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                width: 100%;
+                float: none;
+            }
+        }
+
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Faculty of VIVA</h1>
+    </header>
+
+    <nav>
+        <a href="../main.html">Home</a>
+        <a href="../Student/newregister.html">Register Student</a>
+        <a href="viewfacultyMambers.php">Faculty Members</a>
+        <a href="../Student/viewstudent.php">Students</a>
+        <a href="../Table/viewTimetable.php">View Timetable</a>
+        <a href="../Table/table.php">Create Timetable Table</a>
+    </nav>
+</body>
+</html>

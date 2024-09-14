@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+</head>
+<style>
+    @media(max-width:1200px){
+        header{
+            height:auto;
+            position: relative;
+            text-align:center;
+            display:flex;
+            flex-direction: column;
+            height:13em;
+        }
+        #a{
+            position: relative;
+            top:-1em;
+        }
+        #b{
+            position: relative;
+            top:-2em;
+        }
+        #c{
+            position: relative;
+            top:-3em;
+        }
+
+        #d{
+            width:90%;
+            position: relative;
+            top:-4em;
+        }
+        .one{
+        position: relative;
+        left:-1em;
+        }
+        #a{
+        position: relative;
+        left:-2em;
+        }
+    }
+   @media(min-width:1200px){
+    header{
+        display:flex;
+        } 
+    #a{
+        position: relative;
+        top:-0.5em;
+    }
+    #d{
+            width:20%;
+            position: relative;
+            top:0.3em;
+      }
+    #b{
+        left:2em;
+        position: relative;
+      }
+    #c{
+        position: relative;
+        left:1em;
+      }
+      .one{
+        position: relative;
+        left:-0.5em;
+      }
+    #one{
+        font-size:2rem;
+        position: relative;
+        top: 0.3em;
+        color:white;
+    }
+    #three{
+        font-size:2rem;
+        position:relative;
+        top:0.3em;
+    }
+    #four{
+        font-size:1.6rem;
+        position: relative;
+        top: 0.3em;
+        background-color: black;
+        color:white;
+    }
+    #two{
+        font-size:1.6rem;
+        position: relative;
+        top: 0.3em;
+        background-color: black;
+        color: white;
+    }
+    #img2{
+        height: 3rem;
+        position: relative;
+        top:-0.2em;
+        right:-0.2em;
+    }
+    #img4{
+        height:2.5rem;
+    }
+    #img3{
+        height:2.5rem;
+    }
+    #img{
+        height:2.5rem;
+        width:2.5rem;
+    }
+    #img1{
+        height:2.6rem;
+        right:0.1rem;
+        position: relative;
+    
+    }
+    }
+    @media(min-width:500px){
+    #one{
+        font-size:2rem;
+        position: relative;
+        left:-0.7em;
+        top: 0.3em;
+        color:white;
+    }
+    #three{
+        font-size:2rem;
+        position:relative;
+        left:0em;
+        top:0.3em;
+    }
+    #four{
+        font-size:1.6rem;
+        position: relative;
+        top: 0.3em;
+        background-color: black;
+        color:white;
+    }
+    #two{
+        font-size:1.6rem;
+        position: relative;
+        top: 0.3em;
+        background-color: black;
+        color: white;
+    }
+    #img2{
+        height: 3rem;
+        position: relative;
+        top:-0.2em;
+        right:-0.2em;
+    }
+    #img4{
+        height:2.5rem;
+    }
+    #img3{
+        height:2.5rem;
+    }
+    #img{
+        height:2.5rem;
+        width:2.5rem;
+    }
+    #img1{
+        height:2.6rem;
+        right:0.1rem;
+        position: relative;
+    
+    }
+    }
+    @media(max-width:500px){
+        header{
+            height:15em;
+        }
+        #a{
+           display: flex;
+           flex-direction:column;
+           left:-1em;
+        }
+        #img2{
+            position: relative;
+            height:2.16rem;
+            right:-0.2em;
+            top:-0.1em;
+        }
+        .one{
+        position: relative;
+        top:-1em;
+        }
+    #b{
+        position: relative;
+        top:-2em
+    }
+    #c{
+        position: relative;
+        top:-3.5em;
+    }
+    #d{
+        position: relative;
+        top:-5em;
+    }
+    #one{
+        font-size:1rem;
+        position: relative;
+        top: 0.3em;
+        color:white;
+    }
+    #three{
+        font-size:1rem;
+        position:relative;
+        top:0.3em;
+    }
+    #four{
+        font-size:0.8rem;
+        position: relative;
+        top: 0.5em;
+        background-color: black;
+        color:white;
+    }
+    #two{
+        font-size:0.8rem;
+        position: relative;
+        top:0.5em;
+        background-color: black;
+        color: white;
+    }
+
+    }
+    @media(max-width:240px){
+        header{
+            height:15em;
+        }
+    }
+    @media(max-width:200px){
+        header{
+            height:16em;
+        }
+    }
+    #a{
+        display:inline-flex;
+    }
+    
+    ul{
+        color:white;
+    }
+    #img4{
+        border-radius: 10px;
+    }
+    #d{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    button{
+        background-color: black;
+        color: white;
+    }
+    table,td{
+        border:0.1rem solid black;
+        border-collapse: collapse;
+    }
+    th{
+        background-color:black;
+        color:white;
+    }
+     header{
+        background-color: black;
+        display:flex;
+        margin:-0.5em;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .title{
+        text-align: center;
+    }
+    [type="text"]{
+            border-radius:0.5em;
+    }
+    [type="time"]{
+        border-radius:0.5em;
+    }
+    b{
+      display: flex;
+      justify-content: space-between;
+    }
+    #table{
+        text-align: center;
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+        }
+
+        main {
+            padding: 1em;
+        }
+        
+        #welimage{
+            border-radius:270px;
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:28%;
+            top: 5em;
+        }
+        .emoji{
+              font-size: xx-large;
+              position: relative;
+              top:-1em;
+        }
+        p{
+            font-size: xx-large;
+            position: relative;
+            top:-2em;
+        }
+</style>
+<body>
+    <header>
+        <ul class="one" id="a">
+           <a href=../main.html id="one" style="text-decoration:none;"><img id="table" src="../Image/4598376.png" height="40px"></a>
+           <select name="Service" id="four" onchange="window.location.href=this.value;">
+           <option value="">Faculty</option>
+           <option value="../Faculty/viewfacultyMambers.php">Members</option>
+           <option value="../Faculty/facultyregistration.html">Add</option>
+           </select>
+           <select name="contact" id="two" onchange="window.location.href=this.value;">
+            <option value="Student">Students</option>
+            <option value="../Student/viewstudent.php">Student</option>
+            <option value="../Student/newregister.html">Add</option>
+           </select>
+           <select name="Service" id="four" onchange="window.location.href=this.value;">
+            <option value="">Timetable</option>
+            <option value="../Table/viewTimetable.php">View</option>
+            <option value="../Table/table.php">Create</option>
+            </select>
+        </ul>
+        <ul class="one" id="b">
+           <input class="search" type="search" placeholder="search">
+           <button class="searchbutton" type="submit" onclick="search()">Search</button>
+        </ul>
+        <ul class="one" id="c"><span class="clock">Current time:<span id="time"></span></span></ul>
+        <ul class="one" id="d"> 
+            <a href="https://web.whatsapp.com/"target="_main"><img id="img2" src="../Image/whatsapp.webp" height="30px"></a>
+            <a href="https://www.instagram.com/ayushshukla1506/"target="_main"><img id="img4" src="../Image/instagram.jpg" height="30px"></a>
+            <a href="https://www.facebook.com/profile.php?id=100010893589138"target="_main"><img id="img3"src="../Image/facebook.png" height="30px"></a>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox?compose=DmwnWrRnXvdVqbxrNDZkSnKQrBHGNhnwqmfPKWDqXHqgXMkhSbDTBCFTVZGtcBVxWZTrBTZwVVnq"target="_main"><img id="img" src="../Image/gmail.png" height="30px" width="30px"></a>
+            <a href="https://www.youtube.com/@CricketAakash"target="_main"><img id="img1" src="../Image/youtube.png" height="30px"></a>
+        </ul>
+    </header>
+    <main>
+        <img src="../Image/welcome.jpeg" id="welimage" alt="Welcome Image">
+    </main>
+<script>
+         function search(){
+         alert("Not in Working")
+      }
+        let a;
+        let date;
+        setInterval(()=>{
+            a = new Date(); 
+            let weekday=a.toLocaleDateString("default",{weekday:"long"});
+            let year = a.toLocaleDateString("default",{year:"numeric"});
+            let month = a.toLocaleDateString("default",{month:"long"});
+            let day = a.toLocaleDateString("default",{day:"numeric"});
+            date = weekday +","+ day + "-" + month + "-" + year;
+            let Hour=a.toLocaleTimeString();
+            time= Hour;
+            document.getElementById('time').innerHTML = Hour+ "<br>" + date;
+        },1000);
+                function getAndUpdate(){
+                console.log("Updating List...");
+                tim1 = document.getElementById('time1').value;
+                tim2 = document.getElementById('time2').value;
+                lec1 = document.getElementById('lecture1').value;
+                lec2 = document.getElementById('lecture2').value;
+                lec3 = document.getElementById('lecture3').value;
+                lec4 = document.getElementById('lecture4').value;
+                lec5 = document.getElementById('lecture5').value;
+                lec6 = document.getElementById('lecture6').value;
+                if (localStorage.getItem('itemsJson')==null){
+                    itemJsonArray = [];
+                    itemJsonArray.push([tim1,tim2,lec1,lec2,lec3,lec4,lec5,lec6]);
+                    localStorage.setItem('itemsJson',JSON.stringify(itemJsonArray))
+                }
+                else{
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr);
+                    itemJsonArray.push([tim1,tim2,lec1,lec2,lec3,lec4,lec5,lec6]);
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                }
+                update();
+            }
+
+            function update(){
+                if (localStorage.getItem('itemsJson')==null){
+                    itemJsonArray = []; 
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                } 
+                else{
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr); 
+                }
+                let tableBody = document.getElementById("tableBody");
+                let str = "";
+                itemJsonArray.forEach((element, index) => {
+                    str += `
+                    <tr>
+                    <th scope="row">${index+1}</th>
+                    <td>${element[0]}-${element[1]}</td>
+                    <td>${element[2]}</td>
+                    <td>${element[3]}</td>
+                    <td>${element[4]}</td>
+                    <td>${element[5]}</td>
+                    <td>${element[6]}</td>
+                    <td>${element[7]}</td>
+                    <td><button onclick="deleted(${index})">Delete</button></td> 
+                    </tr>`; 
+                });
+                tableBody.innerHTML = str;
+            }
+            add = document.getElementById("add");
+            add.addEventListener("click", getAndUpdate);
+            update();
+            function deleted(itemIndex){
+                console.log("Delete", itemIndex);
+                itemJsonArrayStr = localStorage.getItem('itemsJson')
+                itemJsonArray = JSON.parse(itemJsonArrayStr);
+                itemJsonArray.splice(itemIndex, 1);
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+                update();
+             }
+            function clearstorage(){
+                if (confirm("Do you really want to clear?")){
+                console.log('Clearing the storage')
+                localStorage.clear();
+                update();
+                }
+            }
+        </script>
+
+    </body>
+</html>
